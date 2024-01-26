@@ -1,0 +1,1057 @@
+@media(max-width:4000px) and (min-width:1030px ){
+  .excluir{
+    display:none;
+  }
+}
+
+@font-face{
+  font-family: Kayke Sans Regular;
+  src: url("./Fonts/Kayak/Regular.otf");
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+html, body, .navBar {
+    position:relative;
+    min-height: 100vh;
+    max-width: 100vw;
+    width: 100vw;
+}
+.logo{
+    grid-column: 3;
+    grid-row: 1;
+    position: relative;right: 24vh;top: 7vh;
+   font-size: 20px;
+    transition: 1s;
+    color: #ff3401;
+    z-index: 9;
+    position: fixed;
+    font-family: Kayke Sans Regular;
+}
+.logo:hover{
+    letter-spacing: 30px;
+    transition: 1s;
+    z-index: 9;
+}
+
+.navBar  {
+  position: absolute;
+  top: 0;
+  left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+   background-color: rgb(14, 13, 13);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(7, 100px);
+    font-family: Kayke Sans Regular;
+}
+
+.icon{
+    position: absolute;
+    z-index: 4;
+    left: 5%;
+    width: fit-content;
+    height: 44px;
+    cursor: pointer;
+    background-color: white;
+    z-index: 100;
+}
+.hamburguer{
+    top: 8vh;
+    left: 10%;
+    width: 30px;
+    height: 6px;
+    background:#ffffff;
+    position: absolute;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 1s;
+    position: fixed;
+    z-index: 100;
+}
+
+.hamburguer::before{
+    top: -12px;
+    content: '';
+    position: absolute;
+    width: 37px;
+    height: 6px;
+    background:#ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 1s;
+    z-index: 100;
+}
+.hamburguer::after{
+    top: 12px;
+    content: '';
+    position: absolute;
+    width: 37px;
+    height: 6px;
+    background:#ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 1s;
+    z-index: 100;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20%;
+    padding: 145px 0 0;
+    flex-wrap: nowrap;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+   
+}
+.listItems a{
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+  transition-delay: 0.2s;
+    
+}
+.listItems a:hover{
+    letter-spacing: 40px;
+    transition: 1s;
+}
+
+
+.list .listItems{
+    padding: 0;
+    list-style: none;
+    
+}
+.list .listItems li{
+    margin: 70px 8px;
+    cursor: pointer;
+}
+.list .listItems li:hover{
+ font-weight: 1500;
+}    
+.list h4, .EntrarContato, .email{
+    position: relative;left: 60vh;bottom: 65vh;
+    font-size: 80%;
+    color: black;
+ 
+   }
+    .list h4{
+        padding-bottom: 40px;
+        width: 28%;
+        font-size: 100%;
+    } 
+    .EntrarContato{
+        width: 30%;
+        font-size: 70%;
+    }
+    .list .email{
+        padding-top: 30px;
+        font-size: 50%;
+
+    }
+    .email:hover{
+        font-weight: bolder;
+        font-size: 30px;
+        transition: 1s;
+    }
+    .email{
+        transition: 1s;
+    }
+
+
+.icon.iconActive .hamburguer{
+    background: transparent;
+    box-shadow: 0 2px 5px transparent;
+}
+
+.icon.iconActive .hamburguer:after{
+    top: 0;
+    background-color: #fff;
+    transform: rotate(225deg);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.icon.iconActive .hamburguer:before{
+    top: 0;
+    background-color: #fff;
+    transform: rotate(135deg);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu.menuOpen {
+    width: 204.5vh;
+    height: 100vh;
+   
+    box-shadow: 10px 0px 69px 0px rgba(0, 0, 0, 0.59);
+    transition: 1s;
+    background: #bf2600;
+    transition-delay: 0.2s;
+    z-index: 99;
+    position: fixed;
+}
+
+.menu.menuClose{
+    width: 0;
+    overflow: hidden;
+    transition: 2s;
+    height: 520vh;
+}
+
+
+
+
+.container {
+    
+  height: 100vh;
+  width: 200vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;top: 150px;
+ 
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  max-width: 100%;
+
+
+ 
+}
+
+.item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 60%;
+
+  
+  
+
+}
+
+
+.photo {
+ 
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+  position: absolute;
+  left: 700px;
+  
+}
+.photo video{
+  position: relative;bottom: 150px;
+width: 180%;
+}
+.video3, .video4{
+height: 280%;
+
+}
+
+.info {
+  position: relative;bottom: 7%;left: 15%;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 20%;
+  box-sizing: border-box;
+  cursor: grab;
+  overflow: hidden;
+  
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+
+  
+}
+
+
+.description {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: block;
+  padding-top: 20px;
+ 
+}
+
+.subtitle {
+  font-size: 20px;
+  display: block;
+  border-bottom: #ff8001 5px solid;
+ 
+}
+.carousel .item:nth-child(3) .subtitle {
+  position: relative;right: 70px;
+  width: 150%;
+ 
+
+}
+.carousel .item:nth-child(2) .subtitle {
+  position: relative;top: 5px;
+
+}
+.carousel .item:nth-child(5) .info {
+  position: relative;bottom: 120px;
+ 
+  
+}
+
+.buttons {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+ 
+  
+}
+
+.buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.buttons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+
+}
+.direita{
+  transform: rotate(180deg);
+  position: relative;right: 100px;top: 150px;
+}
+.esquerda{
+  position: relative;left: 110px;top: 150px;
+}
+
+.aboutMe{
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  //background-color: #1fffad;
+  background-color: #ffd21f;
+  position: relative;top: 620px;
+  font-family: Kayke Sans Regular;
+  z-index: 10;
+}
+
+.about {
+  color: rgb(0, 0, 0);
+  font-size: 1.6rem;
+  grid-column: 4/20;
+  grid-row: 2;
+}
+.aboutMe p{
+  position: relative;bottom: 40px;
+}
+.aboutButton{
+  padding: 10px;
+  background-color: transparent;
+ border: solid 2px;
+ margin-top: 25px;
+}
+.aboutButton a{
+  text-decoration: none;
+  color: black;
+}
+
+.myServices{
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(7, 180px);
+  background-color: #f2f2f2;
+  position: relative;top: 65vh;
+  font-family: Kayke Sans Regular;
+}
+
+.myServices h1{
+  grid-row: 2;
+  grid-column: 4/9;
+  color: #c91313;
+}
+.myServices .project1{
+  grid-row: 4;
+  grid-column: 4/8;
+}
+.myServices .project2{
+  grid-row: 6;
+  grid-column: 4/8;
+}
+.myServices .project3{
+  grid-row: 4;
+  grid-column:15/19;
+}
+.myServices .project4{
+  grid-row: 6;
+  grid-column:15/19;
+}
+.myServices .explanation1{
+  grid-row: 5;
+  grid-column: 4/8;
+}
+.myServices .explanation2{
+  grid-row: 7;
+  grid-column: 4/8;
+}
+.myServices .explanation3{
+  grid-row: 5;
+  grid-column:15/19;
+}
+.myServices .explanation4{
+  grid-row: 7;
+  grid-column:15/19;
+}
+
+.workMe{
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(7, 100px);
+  background-color: #000000;
+  position: relative;top: 550px; 
+  font-family: Kayke Sans Regular;
+}
+.workMe h1{
+  color: white;
+}
+.workMe a{
+  grid-column: 12;
+
+}
+.workMe h4{
+  color: white;
+  grid-row: 7;
+  grid-column: 9/18;
+  padding-top: 30px;
+  font-size: 0.8rem;
+ 
+}
+.linkedin{
+  grid-row: 3;
+  padding-top: 30px;
+  text-decoration: none;
+  color: white;
+}
+.github{
+  grid-row: 4;
+  padding-top: 30px;
+  text-decoration: none;
+  color: white;
+}
+.instagram{
+  grid-row: 5;
+  padding-top: 30px;
+  text-decoration: none;
+  color: white;
+}
+.whatsapp{
+  grid-row: 6;
+  padding-top: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.letsCode{
+  grid-column: 4/8;
+  grid-row: 2;
+}
+.socialMedia{
+  grid-row: 2;
+  grid-column:12/18;
+}
+
+.contactButton{
+  grid-column: 4/6;
+  grid-row: 3;
+  width: 90%;
+  height: 50%;
+  margin-top: 25px;
+  background-color: transparent;
+  border: solid 2px #1fffad;
+  color: white;
+  font-size: 1rem;
+  
+}
+.color1{
+  color: #1fffad;
+}
+.color2{
+  color: #c91313;
+}
+.color3{
+  color:  #ffd21f;
+}
+.contactButton a{
+  text-decoration: none;
+  color: white;
+}
+
+.cursor {
+  background-color: transparent;
+  border: solid 1px black;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.cursor2{
+  background-color: #4152c3;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  margin: 10px;
+  z-index: 999;
+  pointer-events: none;
+
+}
+
+
+
+
+/////// Responsividade
+
+@media  (max-width: 350px){
+  .aboutMe{
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    background-color: #ffd21f;
+    position: relative;top: 550px;
+  }
+  .about {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    position: relative;right: 20px;
+    grid-column: 1/21;
+    grid-row: 1;
+  }
+  .about p{
+    padding: 45px;
+    position: relative;top: 30px;
+  }
+  .aboutButton{
+    padding: 10px;
+    position: relative;left: 50px;
+    background-color: transparent;
+   border: solid 1.5px;
+   margin-top: 25px;
+  }
+  // pagina inicial
+  .navBar  {
+    position: absolute;
+    top: 0;
+    left: 0;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      background-color: black;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: repeat(7, 100px);
+  }
+
+// aba de serviços
+
+  .myServices{
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(8, 150px);
+    background-color: #f2f2f2;
+   margin: 0 auto;
+   max-width: 600px;
+   width: 350%;
+   min-height: 100vh;
+   align-items: center;
+   justify-content: center;
+  
+  }
+  .myServices h1{
+    grid-row: 1;
+    grid-column: 2/3;
+    padding-top: 10px;
+    position: relative;right: 15%;
+    font-size: 25px;
+    color: #c91313;
+  }
+  .myServices h2{
+    font-size: 20px;
+   
+  }
+  .myServices .project1{
+    grid-row: 2;
+    grid-column: 2/4;
+  }
+  .myServices .project2{
+    grid-row: 4;
+    grid-column: 2/4;
+  }
+  .myServices .project3{
+    grid-row: 6;
+    grid-column: 2/4;
+  }
+  .myServices .project4{
+    grid-row: 8;
+    grid-column: 2/4;
+  }
+  .myServices .explanation1{
+    grid-row: 2;
+    grid-column: 2/4;
+  }
+  .myServices .explanation2{
+    grid-row: 4;
+    grid-column: 2/4;
+  }
+  .myServices .explanation3{
+    grid-row: 6;
+    grid-column: 2/4;
+  }
+  .myServices .explanation4{
+    grid-row: 8;
+    grid-column: 2/4;
+  }
+
+
+
+ .sobreServicos{
+  position: relative;bottom: 250px;left: 20px;
+  width: 200%;
+  
+ }
+
+  .inner{
+    display: flex;
+   
+  }
+.itemSlide{
+  min-height: 200px;
+  min-width: 400px;
+  padding: 14px;
+
+}
+.itemSlide img{
+  width: 100%;
+  height: 90%;
+  border-radius: 12px;
+  pointer-events: none;
+  margin-left: -12px;
+
+}
+.carouselServices{
+  cursor: grab;
+  overflow: hidden;
+  position: relative;right: 159px;
+ 
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 5%;
+  padding: 145px 0 0;
+  flex-wrap: nowrap;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+ 
+}
+.icon{
+  position: absolute;
+  z-index: 4;
+  left: 5%;
+  width: fit-content;
+  height: 44px;
+  cursor: pointer;
+  background-color: white;
+  z-index: 100;
+}
+.hamburguer{
+  top: 8vh;
+  left: 3%;
+  width: 30px;
+  height: 6px;
+  background:#ffffff;
+  position: absolute;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 1s;
+  position: fixed;
+  z-index: 100;
+}
+.logo{
+
+
+ 
+ font-size: 20px;
+  transition: 1s;
+  color: #ff3401;
+  z-index: 9;
+  
+}
+
+.logo a {
+  position: relative;left: 500%;
+}
+
+
+
+
+
+
+.item {
+  
+  width: 26%;
+  height: 100%;
+font-size: 1rem;
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 60%;
+  right: 3%;
+
+  
+}
+.info {
+  position: relative;bottom: 25%;left: 1vw;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: fit-content;
+  box-sizing: border-box;
+  cursor: grab;
+  overflow: hidden;
+
+
+  
+}
+.carousel{
+  max-width: 100%;
+}
+
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+  
+  
+}
+.subtitle {
+
+  border-bottom: #ff8001 5px solid;
+ 
+}
+.video1{
+  position: relative;top: 50px;right: 640px;
+  
+}
+.video2{
+  position: relative;top: 50px;right: 640px;
+  
+}
+.video3{
+  position: relative;bottom: 10%;right: 640px;
+  margin-top: 90px;
+  
+}
+.video4{
+  position: relative;bottom: 10%;right: 655px;
+  margin-top: 120px;
+  
+}
+.photo{
+  width: 40%;
+  
+}
+
+.carousel .item:nth-child(1) .title {
+  margin-left: 20px;
+  
+ 
+
+}
+.description{
+  width: 80%;
+}
+
+.carousel .item:nth-child(1) .description {
+position: relative;left: 40px;
+  font-size: 16px;
+  width: 80%;
+  display: block;
+  padding-top: 20px;
+}
+.carousel .item:nth-child(1) .subtitle {
+  margin-left: 10px;
+  border-bottom: #ff8001 5px solid;
+  position: relative;left: 20%;
+  width: 60%;
+
+}
+.carousel .item:nth-child(2) .info {
+  position: relative;left: 30px;
+ 
+  
+}
+
+.carousel .item:nth-child(2) .title {
+  margin-right: 40px;
+ 
+  
+}
+.carousel .item:nth-child(2) .subtitle {
+  margin-right: 35px;
+  border-bottom: #ff8001 5px solid;
+  position: relative;left: 13%;
+  width: 60%;
+
+}
+.carousel .item:nth-child(2) .description {
+  margin-left: 10px;
+  font-size: 16px;
+  width: 80%;
+  display: block;
+  padding-top: 15px;
+  
+}
+.carousel .item:nth-child(3) .title {
+  margin-right: 15px;
+  
+}
+.carousel .item:nth-child(3) .subtitle {
+  position: relative;right: 75px;
+  border-bottom: #ff8001 5px solid;
+  position: relative;left: 8%;
+  width: 80%;
+
+  
+}
+.carousel .item:nth-child(3) .description {
+  padding-left: 15px;
+position: relative;left: 5px;
+  font-size: 16px;
+  width: 90%;
+  display: block;
+  padding-top: 20px;
+  
+}
+
+.carousel .item:nth-child(4) .title {
+  width: 80%;
+  margin-left: 20px;
+  
+}
+.carousel .item:nth-child(4) .subtitle {
+  position: relative;right: 5px;
+  border-bottom: #ff8001 5px solid;
+  position: relative;left: 8%;
+  width: 80%;
+
+  
+}
+
+.carousel .item:nth-child(4) .description {
+  padding-left: 15px;
+  position: relative;left: 5px;
+  font-size: 16px;
+  width: 90%;
+  display: block;
+  padding-top: 20px;
+  
+}
+
+
+
+
+
+.subtitle {
+  font-size: 14px;
+  
+  margin-bottom: 10px;
+  display: block;
+  border-left: #ff8001 5px solid;
+  border: none;
+  
+}
+
+
+
+.buttons {
+  position: absolute;
+  bottom: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  display: none;
+  
+}
+
+.buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.buttons img {
+  width: 20px;
+  height: 50px;
+  object-fit: contain;
+  display: hidden;
+
+}
+.direita{
+  transform: rotate(180deg);
+  position: relative;right: 320px;top: 150px;
+  display: hidden;
+}
+.esquerda{
+  position: relative;right: 20px;top: 155px;
+  display: hidden;
+}
+
+
+// contato, ultima página
+.workMe{
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(7, 120px);
+  background-color: #000000;
+}
+.workMe a{
+  grid-column: 12;
+
+}
+.workMe h4{
+  color: white;
+  grid-row: 7;
+  grid-column: 9/18;
+  padding-top: 30px;
+  font-size: 0.8rem;
+ 
+}
+.linkedin{
+ 
+  grid-row: 3;
+  padding-top: 70px;
+  position: relative;right: 150%;
+  text-decoration: none;
+  color: white;
+}
+.github{
+  grid-row: 4;
+
+  text-decoration: none;
+  color: white;
+  position: relative;right: 150%;bottom: 45%;
+}
+.instagram{
+  grid-row: 4;
+  padding-top: 30px;
+  text-decoration: none;
+  color: white;
+  position: relative;right: 150%;bottom: 25%;
+}
+.whatsapp{
+  grid-row: 4;
+  padding-top: 30px;
+  text-decoration: none;
+  color: white;
+  position: relative;right: 150%;bottom: 5%;
+}
+
+.letsCode{
+  grid-column: 3/10;
+  width: 300%;
+  grid-row: 1;
+  font-size: 20px;
+}
+.socialMedia{
+  grid-row: 3;
+  grid-column: 3/10;
+  width: 300%;
+  
+  font-size: 20px;
+}
+
+.contactButton{
+  grid-column: 3/5;
+  grid-row: 2;
+  width: 350%;
+  height: 30%;
+ position: relative;bottom: 45%;
+  background-color: transparent;
+  border: solid 1px #1fffad;
+  color: white;
+  font-size: 1rem;
+ 
+}
+.contactButton a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+}
+.workMe h4{
+  color: white;
+  grid-row: 5;
+  grid-column: 6/18;
+  padding-top: 30px;
+  font-size: 0.4rem;
+ 
+}
+
+}
+
+
+// aleatórios
+
+.move{
+  position: relative;right: 40000px;
+}
+
