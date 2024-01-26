@@ -1,7 +1,7 @@
 [submodule "home"]
     path = home
-    url = https://github.com/Elrekito1/ERS/tree/9bc77064664d18203eca1771bed654232fd0f194/home
+    url = https://github.com/Elrekito1/ERS/tree/main/home
 
 [submodule "ServerTest"]
     path = ServerTest
-    url = https://github.com/Elrekito1/ERS/tree/9bc77064664d18203eca1771bed654232fd0f194/ServerTest
+    url = https://github.com/Elrekito1/ERS/tree/main/ServerTest
