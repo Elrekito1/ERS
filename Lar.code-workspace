@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../Lar"
+		},
+		{
+			"path": "../../../../../../Users/elrek/Downloads/OpenSSL-1.1.1h_win32/OpenSSL-1.1.1h_win32"
+		},
+		{
+			"path": "../../../../../../Users/elrek/Portfolio"
+		},
+		{
+			"path": "../../../e-commerce"
+		},
+		{
+			"path": "../../../../../Estudos"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "lumos"
+	}
+}
