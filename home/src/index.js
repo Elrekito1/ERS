@@ -8,12 +8,6 @@ import './Components/SpringIn/Work/Coisas/work.json';
 import Script from './server/script.js';
 import reportWebVitals from './reportWebVitals';
 
-window.addEventListener('error', (event) => {
-  if (event.target && event.target.src && event.target.src.includes('favicon.ico')) {
-    console.log('Erro ao carregar o ícone do site.');
-    event.preventDefault();
-  }
-});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

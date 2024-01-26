@@ -7,9 +7,7 @@ import "../Components/SpringIn/Home/home.css"
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "../../node_modules/swiper/swiper.css";
 import "../../node_modules/swiper/swiper.min.css";
-import Imagem1 from "./Imagens/Imagem1.jpeg"
-import Imagem2 from "./Imagens/Imagem2.jpeg"
-import Imagem3 from "./Imagens/Imagem3.jpeg"
+
 
 import axios from 'axios';
 
