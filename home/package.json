@@ -4,20 +4,20 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
+    "@react-spring/animated": "~9.7.3",
+    "@react-spring/core": "~9.7.3",
+    "@react-spring/konva": "~9.7.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^1.6.4",
     "cors": "^2.8.5",
-   
     "framer-motion": "^10.16.16",
-   
     "path-browserify": "^1.0.1",
     "querystring-es3": "^0.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-fade-in": "^2.0.1",
+    "react-dom": "^18.0.0",
     "react-intersection-observer": "^9.5.3",
     "react-responsive": "^9.0.2",
     "react-responsive-carousel": "^3.2.23",
@@ -36,7 +36,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "proxy": "http://localhost:5000"
-
   },
   "eslintConfig": {
     "extends": [
