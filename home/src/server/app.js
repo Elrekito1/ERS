@@ -1,7 +1,8 @@
-import express from 'express'
 
-import cors from 'cors'
+const express = require('express')
+const cors = require('cors')
 const app = express()
+
 
 app.use(cors())// Comando para usar antes das definições de rota 
 
@@ -25,4 +26,4 @@ app.listen(8000, () => {
 // A forma correta de tratar um erro é declarar um objeto Error e enviar para a função next(err) com um middleware após já ter declarado todas as rotas da aplicação
 
 
-export default cors 
+module.exports = app;

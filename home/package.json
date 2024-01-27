@@ -31,8 +31,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start --no-error-on-unmatched-pattern",
-    "build": "react-scripts build",
+    "start": "npm start --no-error-on-unmatched-pattern",
+    "build": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "proxy": "http://localhost:5000"
