@@ -5,6 +5,11 @@
       "src": "public/build",
       "use": "@vercel/static"
     }
+  ],
+    "scripts":[
+      {
+        "start": "npm start"
+      }
   ]
 }
 
