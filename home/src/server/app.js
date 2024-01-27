@@ -4,6 +4,7 @@ import cors from 'cors'
 const app = express()
 
 app.use(cors())// Comando para usar antes das definições de rota 
+
 // Liberação do CORS, assim permite req de outros domínios ou subdomínios
 app.use(express.json())
 app.use(express.urlencoded({extended: true})) // Para que o servidor compreenda o formato correta foi avisado o tipo de body que aceita (json)
@@ -13,7 +14,10 @@ app.get("/", (req, res) =>{
     res.send('Home')
 })
 
-app.listen(8000)
+
+app.listen(8000, () => {
+    console.log('Servidor rodando na porta 8000');
+  });
 
 // Middlewares é uma função que intercepta cada requisição que a aplicação recebe
 // pelo método app.use() são declarados os middlewares do Express, toda requisição é respondida por um callback do tipo:
