@@ -58,7 +58,7 @@ app.use(cors({
 }));
 
 // Mongo
-mongoose.connect(process.env.ATLAS_URI, {}).
+mongoose.connect(process.env.ATLAS_URI || 'mongodb+srv://erickRS:Beginningisnear1@portfolio.eglq0un.mongodb.net/', {}).
 then(()=>{console.log("Server is running on mongo");})
 .catch((err)=>{console.error("Error on mongo server", err)})
 
