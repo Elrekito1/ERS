@@ -3,8 +3,8 @@
     "concurrently": "^8.2.2"
   },
   "scripts": {
-    "start-home": "cd home && npm start",
-    "start-portfolio": "cd ServerTest/portfolio && npm start",
-    "start-all": "concurrently \"npm run start-home\" \"npm run start-portfolio\""
+    "start-home": "cd C:/Códigos/Códigos/Portfólio/Lar2/ERS/home && npm start",
+
+    "start-all": "concurrently \"npm run start-home\" "
   }
 }
