@@ -4,7 +4,7 @@
   },
   "scripts": {
     "start-home": "cd C:/Códigos/Códigos/Portfólio/Lar2/ERS/home && npm start",
-
-    "start-all": "concurrently \"npm run start-home\" "
+    "start-portfolio": "cd C:/Códigos/Códigos/Portfólio/Lar2/ERS/ServerTest/portfolio && npm start",
+    "start-all": "concurrently \"npm run start-home\" \"npm run start-portfolio\""
   }
 }
