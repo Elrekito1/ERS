@@ -67,6 +67,14 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+// Middlaware para configurar o host
+app.use((req, res, next)=>{
+  // Permitindo todos os hosts
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next()
+})
+
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
