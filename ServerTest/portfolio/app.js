@@ -4,6 +4,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const httpProxy = require('http-proxy');
+
 
 
 // Routes
@@ -19,6 +21,7 @@ const contactMailRouter = require('./routes/contactMailRoutes')
 
 
 const app = express();
+const proxy = httpProxy.createProxyServer(); 
 
 const mongoose = require('mongoose')
 
@@ -73,6 +76,21 @@ app.use((req, res, next)=>{
   res.setHeader('Access-Control-Allow-Origin', '*');
   next()
 })
+
+
+// Servir arquivos estáticos do frontend do servidor local (localhost:3000)
+app.use(express.static(path.join(__dirname, 'C:/Códigos/Códigos/Portfólio/Lar2/ERS/home/')));
+
+// Rota para responder ao frontend do servidor local
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'C:/Códigos/Códigos/Portfólio/Lar2/ERS/home/', 'index.js'));
+});
+
+// Proxy reverso para encaminhar solicitações para o servidor local (localhost:3000)
+app.all('/proxy', (req, res) => {
+  proxy.web(req, res, { target: 'http://localhost:3000' });
+});
+
 
 
 // error handler
