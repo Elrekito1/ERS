@@ -12,7 +12,8 @@ try{
   res.json({sucess:true, data: home})
 }catch (err){
   console.error(err);
-  res.json(500)({sucess:false, error: err.message})
+  res.status(500).json({ success: false, error: err.message });
+
 }
 })
 
