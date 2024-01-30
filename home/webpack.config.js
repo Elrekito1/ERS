@@ -11,7 +11,7 @@ module.exports = {
       allowedHosts: 'all',
     },
     mode: 'development', // Defina o modo para 'development' ou 'production'
-    entry: './src/index.js', // Arquivo de entrada do seu aplicativo
+    entry: '/src/index.jsx', // Arquivo de entrada do seu aplicativo
     output: {
       path: path.resolve(__dirname, 'dist'), // Diretório de saída para os arquivos processados pelo Webpack
       filename: 'bundle.js' // Nome do arquivo de saída

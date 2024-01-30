@@ -8,7 +8,7 @@ import "../../node_modules/swiper/swiper.css";
 import "../../node_modules/swiper/swiper.min.css";
 import photoMe from "../Components/SpringIn/AboutMe/Images/photoMe.jpeg"
 import setup from "../Components/SpringIn/AboutMe/Images/setupPhoto.jpeg"
-import favicon from "../"
+
 import axios from 'axios';
 
 export default function AboutMe(){
