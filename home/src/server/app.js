@@ -15,9 +15,18 @@ app.get("/", (req, res) =>{
     res.send('Home')
 })
 
+// Middlaware para configurar o host
+app.use((req, res, next)=>{
+  // Permitindo todos os hosts
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next()
+})
 
-app.listen(8000, () => {
-    console.log('Servidor rodando na porta 8000');
+
+
+
+app.listen(5000, () => {
+    console.log('Servidor rodando na porta 5000');
   });
 
 // Middlewares é uma função que intercepta cada requisição que a aplicação recebe
