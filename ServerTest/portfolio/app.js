@@ -79,11 +79,11 @@ app.use((req, res, next)=>{
 
 
 // Servir arquivos estáticos do frontend do servidor local (localhost:3000)
-app.use(express.static(path.join(__dirname, 'C:/Códigos/Códigos/Portfólio/Lar2/ERS/home/')));
+app.use(express.static(path.join(__dirname, 'C:/Códigos/Códigos/Portfólio/Lar2/ERS/home/build')));
 
 // Rota para responder ao frontend do servidor local
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'C:/Códigos/Códigos/Portfólio/Lar2/ERS/home/', 'index.js'));
+  res.sendFile(path.join(__dirname, 'C:/Códigos/Códigos/Portfólio/Lar2/ERS/home/build', 'index.html'));
 });
 
 // Proxy reverso para encaminhar solicitações para o servidor local (localhost:3000)
